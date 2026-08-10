@@ -11,60 +11,119 @@ function Navbar() {
 
   return (
     <header className="navbar">
+
       <div className="navbar-container">
 
         {/* Logo */}
-        <a href="#home" className="navbar-logo" onClick={closeMenu}>
+        <a
+          href="#home"
+          className="navbar-logo"
+          onClick={closeMenu}
+        >
           JOSEPH<span>.</span>
         </a>
 
+
         {/* Desktop Navigation */}
         <nav className="navbar-links">
-          <a href="#work">Work</a>
-          <a href="#about">About</a>
-          <a href="#services">Services</a>
-          <a href="#skills">Skills</a>
+
+          <a href="#projects">
+            Work
+          </a>
+
+          <a href="#about">
+            About
+          </a>
+
+          <a href="#services">
+            Services
+          </a>
+
+          <a href="#skills">
+            Skills
+          </a>
+
         </nav>
 
+
         {/* Desktop CTA */}
-        <a href="#contact" className="navbar-cta">
+        <a
+          href="#contact"
+          className="navbar-cta"
+        >
           Let's Talk
+
           <ArrowUpRight size={16} />
         </a>
+
 
         {/* Mobile Menu Button */}
         <button
           className="mobile-menu-button"
           onClick={() => setMenuOpen(!menuOpen)}
-          aria-label="Toggle navigation"
+          aria-label={
+            menuOpen
+              ? "Close navigation"
+              : "Open navigation"
+          }
+          aria-expanded={menuOpen}
         >
-          {menuOpen ? <X size={24} /> : <Menu size={24} />}
+          {menuOpen ? (
+            <X size={24} />
+          ) : (
+            <Menu size={24} />
+          )}
         </button>
+
       </div>
 
+
       {/* Mobile Navigation */}
-      <div className={`mobile-menu ${menuOpen ? "open" : ""}`}>
-        <a href="#work" onClick={closeMenu}>
+      <div
+        className={`mobile-menu ${
+          menuOpen ? "open" : ""
+        }`}
+      >
+
+        <a
+          href="#projects"
+          onClick={closeMenu}
+        >
           Work
         </a>
 
-        <a href="#about" onClick={closeMenu}>
+        <a
+          href="#about"
+          onClick={closeMenu}
+        >
           About
         </a>
 
-        <a href="#services" onClick={closeMenu}>
+        <a
+          href="#services"
+          onClick={closeMenu}
+        >
           Services
         </a>
 
-        <a href="#skills" onClick={closeMenu}>
+        <a
+          href="#skills"
+          onClick={closeMenu}
+        >
           Skills
         </a>
 
-        <a href="#contact" onClick={closeMenu}>
+        <a
+          href="#contact"
+          onClick={closeMenu}
+        >
           Let's Talk
+
           <ArrowUpRight size={18} />
         </a>
+
       </div>
+
     </header>
   );
 }

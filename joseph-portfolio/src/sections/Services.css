@@ -255,6 +255,94 @@
 
 
 /* =================================
+   HOW I WORK
+================================= */
+
+.services-process-section {
+  margin-top: 120px;
+
+  padding-top: 70px;
+
+  border-top: 1px solid var(--color-border);
+}
+
+
+.process-label {
+  margin-bottom: 55px;
+
+  color: var(--color-text-muted);
+
+  font-family: var(--font-mono);
+
+  font-size: 10px;
+
+  letter-spacing: 0.08em;
+}
+
+
+.process-steps {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 1px;
+
+  background: var(--color-border);
+
+  border: 1px solid var(--color-border);
+}
+
+
+.process-step {
+  min-height: 230px;
+
+  padding: 28px;
+
+  background: var(--color-bg);
+}
+
+
+.process-step > span {
+  display: block;
+
+  margin-bottom: 55px;
+
+  color: var(--color-accent);
+
+  font-family: var(--font-mono);
+
+  font-size: 10px;
+}
+
+
+.process-step h3 {
+  margin-bottom: 14px;
+
+  font-family: var(--font-display);
+
+  font-size: 22px;
+
+  font-weight: 500;
+
+  letter-spacing: -0.03em;
+}
+
+
+.process-step p {
+  max-width: 220px;
+
+  color: var(--color-text-muted);
+
+  font-size: 12px;
+
+  line-height: 1.7;
+}
+
+
+
+
+/* =================================
    FOOTER
 ================================= */
 
@@ -313,6 +401,15 @@
     padding: 120px 0;
   }
 
+  .services-process-section {
+    margin-top: 90px;
+  }
+
+  .process-steps {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
   .services-header {
     grid-template-columns: 1fr;
 
@@ -354,6 +451,28 @@
 
   .services {
     padding: 100px 0;
+  }
+
+  .services-process-section {
+    margin-top: 70px;
+
+    padding-top: 50px;
+  }
+
+  .process-label {
+    margin-bottom: 35px;
+  }
+
+  .process-steps {
+    grid-template-columns: 1fr;
+  }
+
+  .process-step {
+    min-height: 190px;
+  }
+
+  .process-step > span {
+    margin-bottom: 35px;
   }
 
   .services-container {

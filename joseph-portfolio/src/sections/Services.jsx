@@ -13,31 +13,34 @@ const services = [
     icon: Palette,
     title: "UI/UX DESIGN",
     description:
-      "Designing clear, engaging, and user-focused digital experiences from early ideas to polished interfaces.",
+      "Designing thoughtful interfaces and digital experiences that are clear, intuitive, and focused on real user needs.",
     process: "Research → Wireframes → Prototypes → Design Systems",
   },
+
   {
     number: "02",
     icon: Code2,
     title: "FRONTEND DEVELOPMENT",
     description:
-      "Building responsive, accessible, and interactive interfaces that turn designs into functional products.",
-    process: "React → Responsive UI → APIs → Animations",
+      "Turning designs into responsive, interactive, and accessible interfaces using modern frontend technologies.",
+    process: "React → Responsive UI → APIs → Interactions",
   },
+
   {
     number: "03",
     icon: Layers3,
     title: "FULL-STACK DEVELOPMENT",
     description:
-      "Developing complete web applications with modern frontend, backend, database, and deployment workflows.",
+      "Building complete web applications from the interface to the backend, database, authentication, and deployment.",
     process: "React → FastAPI → Supabase → Deployment",
   },
+
   {
     number: "04",
     icon: Smartphone,
-    title: "WEBSITE DESIGN & DEVELOPMENT",
+    title: "WEB DESIGN & DEVELOPMENT",
     description:
-      "Creating modern websites for businesses, personal brands, organizations, and creative projects.",
+      "Creating modern websites for businesses, organizations, personal brands, and creative projects.",
     process: "Strategy → Design → Development → Launch",
   },
 ];
@@ -45,6 +48,7 @@ const services = [
 function Services() {
   return (
     <section className="services" id="services">
+
       <div className="services-container">
 
         {/* Section Header */}
@@ -53,7 +57,9 @@ function Services() {
           SERVICES
         </div>
 
+
         <div className="services-header">
+
           <h2>
             What I can
             <br />
@@ -61,10 +67,12 @@ function Services() {
           </h2>
 
           <p>
-            From the first idea to the final product, I combine
-            design and development to create digital experiences
-            that are useful, intuitive, and visually engaging.
+            I combine design thinking and development
+            skills to turn ideas into digital products
+            that are useful, functional, and visually
+            engaging.
           </p>
+
         </div>
 
 
@@ -72,6 +80,7 @@ function Services() {
         <div className="services-list">
 
           {services.map((service) => {
+
             const Icon = service.icon;
 
             return (
@@ -88,16 +97,23 @@ function Services() {
 
                 {/* Icon */}
                 <div className="service-icon">
-                  <Icon size={24} strokeWidth={1.5} />
+                  <Icon
+                    size={24}
+                    strokeWidth={1.5}
+                  />
                 </div>
 
 
-                {/* Main Content */}
+                {/* Content */}
                 <div className="service-content">
 
-                  <h3>{service.title}</h3>
+                  <h3>
+                    {service.title}
+                  </h3>
 
-                  <p>{service.description}</p>
+                  <p>
+                    {service.description}
+                  </p>
 
                   <span className="service-process">
                     {service.process}
@@ -118,10 +134,65 @@ function Services() {
         </div>
 
 
-        {/* Bottom Note */}
+        {/* How I Work */}
+        <div className="services-process-section">
+
+          <div className="process-label">
+            HOW I WORK
+          </div>
+
+          <div className="process-steps">
+
+            <div className="process-step">
+              <span>01</span>
+              <h3>DISCOVER</h3>
+              <p>
+                Understand the idea, problem, users,
+                and goals.
+              </p>
+            </div>
+
+
+            <div className="process-step">
+              <span>02</span>
+              <h3>DESIGN</h3>
+              <p>
+                Shape the experience through wireframes,
+                interfaces, and prototypes.
+              </p>
+            </div>
+
+
+            <div className="process-step">
+              <span>03</span>
+              <h3>BUILD</h3>
+              <p>
+                Turn the approved design into a
+                functional digital product.
+              </p>
+            </div>
+
+
+            <div className="process-step">
+              <span>04</span>
+              <h3>LAUNCH</h3>
+              <p>
+                Test, refine, deploy, and prepare the
+                product for real users.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
+
+        {/* Bottom CTA */}
         <div className="services-footer">
 
-          <span>HAVE A PROJECT IN MIND?</span>
+          <span>
+            HAVE A PROJECT IN MIND?
+          </span>
 
           <a href="#contact">
             Start a conversation
@@ -131,6 +202,7 @@ function Services() {
         </div>
 
       </div>
+
     </section>
   );
 }
