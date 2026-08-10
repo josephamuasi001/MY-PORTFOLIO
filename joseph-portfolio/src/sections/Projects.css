@@ -514,6 +514,17 @@
     padding: 100px 0;
   }
 
+  .project-visual-label {
+  left: 20px;
+  bottom: 20px;
+
+  font-size: 20px;
+}
+
+.project-link-wrapper {
+  margin-top: 16px;
+}
+
   .projects-container {
     width: min(
       calc(100% - 32px),
@@ -593,4 +604,109 @@
 
     padding-top: 50px;
   }
+}
+
+/* =================================
+   VISUAL PROJECT LABEL
+================================= */
+
+.project-visual-label {
+  position: absolute;
+
+  left: 32px;
+  bottom: 32px;
+
+  z-index: 3;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  color: var(--color-text);
+
+  font-family: var(--font-display);
+
+  font-size: 24px;
+
+  font-weight: 500;
+
+  letter-spacing: -0.03em;
+
+  opacity: 0.9;
+
+  transition:
+    transform 0.4s ease,
+    color 0.3s ease;
+}
+
+
+.project-card:hover .project-visual-label {
+  transform: translateX(6px);
+
+  color: var(--color-accent);
+}
+
+
+/* =================================
+   CASE STUDY LINK
+================================= */
+
+.project-link-wrapper {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding-top: 18px;
+
+  margin-top: 18px;
+
+  border-top: 1px solid var(--color-border);
+
+  color: var(--color-text-muted);
+
+  font-family: var(--font-mono);
+
+  font-size: 9px;
+
+  letter-spacing: 0.08em;
+
+  transition: color 0.3s ease;
+}
+
+
+.project-link-arrow {
+  width: 30px;
+  height: 30px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid var(--color-border);
+
+  border-radius: 50%;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+
+.project-card:hover .project-link-wrapper {
+  color: var(--color-text);
+}
+
+
+.project-card:hover .project-link-arrow {
+  background: var(--color-accent);
+
+  color: var(--color-bg);
+
+  transform: rotate(45deg);
 }
