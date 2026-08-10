@@ -2,21 +2,20 @@ import {
   FaReact,
   FaJs,
   FaHtml5,
+  FaCss3Alt,
   FaPython,
   FaGitAlt,
   FaGithub,
+  FaFigma,
 } from "react-icons/fa6";
 
 import {
-  Code2,
-  Database,
-  Server,
-  PenTool,
-} from "lucide-react";
+  SiFastapi,
+  SiSupabase,
+  SiVite,
+} from "react-icons/si";
 
 import "./Skills.css";
-
-
 const skillGroups = [
   {
     number: "01",
@@ -27,7 +26,7 @@ const skillGroups = [
     skills: [
       {
         name: "Figma",
-        icon: PenTool,
+        icon: FaFigma,
       },
     ],
   },
@@ -57,7 +56,7 @@ const skillGroups = [
 
       {
         name: "CSS3",
-        icon: Code2,
+        icon: FaCss3Alt,
       },
     ],
   },
@@ -67,7 +66,7 @@ const skillGroups = [
     title: "BACKEND",
 
     description:
-      "Developing APIs, server-side logic, and application infrastructure that power real-world web applications.",
+      "Developing APIs, server-side logic, databases, and application infrastructure that power real-world web applications.",
 
     skills: [
       {
@@ -77,12 +76,12 @@ const skillGroups = [
 
       {
         name: "FastAPI",
-        icon: Server,
+        icon: SiFastapi,
       },
 
       {
         name: "Supabase",
-        icon: Database,
+        icon: SiSupabase,
       },
     ],
   },
@@ -92,7 +91,7 @@ const skillGroups = [
     title: "TOOLS & WORKFLOW",
 
     description:
-      "Using modern development tools to collaborate, manage code, deploy applications, and maintain projects.",
+      "Using modern development tools to collaborate, manage code, build applications, and maintain efficient development workflows.",
 
     skills: [
       {
@@ -107,17 +106,16 @@ const skillGroups = [
 
       {
         name: "Vite",
-        icon: Code2,
+        icon: SiVite,
       },
 
       {
         name: "REST APIs",
-        icon: Server,
+        icon: null,
       },
     ],
   },
 ];
-
 
 function Skills() {
 
@@ -233,13 +231,17 @@ function Skills() {
                         className="technology-card"
                         key={skill.name}
                       >
-
                         <div className="technology-icon">
 
-                          <Icon size={32} />
+                            {Icon ? (
+                            <Icon size={32} />
+                            ) : (
+                                <span className="api-icon">
+                                    API
+                                </span>
+                            )}
 
                         </div>
-
 
                         <span>
 
