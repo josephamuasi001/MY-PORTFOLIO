@@ -4,6 +4,7 @@ import "./About.css";
 function About() {
   return (
     <section className="about" id="about">
+
       <div className="about-container">
 
         {/* Section Label */}
@@ -31,34 +32,94 @@ function About() {
           <div className="about-content">
 
             <p className="about-lead">
-              I'm Joseph AMUASI, a student developer,
+              I'm Joseph AMUASI — a student developer,
               creative developer, and UI/UX designer
-              passionate about turning ideas into useful,
+              who enjoys turning ideas into useful,
               engaging digital products.
             </p>
 
-            <p>
-              I enjoy working across the entire product
-              journey — from understanding a problem and
-              designing the experience to building the
-              interface and connecting the backend.
-            </p>
 
             <p>
-              My current toolkit includes React for
+              I work at the intersection of design and
+              development. I like understanding the
+              problem first, designing the experience,
+              and then building the product behind it.
+            </p>
+
+
+            <p>
+              My current stack includes React for
               frontend development, FastAPI for backend
-              services, and Supabase for data and
+              services, and Supabase for databases and
               authentication. I also use Figma to explore
-              ideas and design interfaces before bringing
+              ideas and create interfaces before bringing
               them to life with code.
             </p>
 
 
             {/* CTA */}
-            <a href="#contact" className="about-link">
+            <a
+              href="#contact"
+              className="about-link"
+            >
               Let's build something
               <ArrowUpRight size={18} />
             </a>
+
+          </div>
+
+        </div>
+
+
+        {/* Identity / Stats */}
+        <div className="about-stats">
+
+          <div className="about-stat">
+
+            <span className="about-stat-number">
+              01
+            </span>
+
+            <span className="about-stat-label">
+              DESIGN
+            </span>
+
+          </div>
+
+
+          <div className="about-stat">
+
+            <span className="about-stat-number">
+              02
+            </span>
+
+            <span className="about-stat-label">
+              DEVELOP
+            </span>
+
+          </div>
+
+
+          <div className="about-stat">
+
+            <span className="about-stat-number">
+              03
+            </span>
+
+            <span className="about-stat-label">
+              SOLVE
+            </span>
+
+          </div>
+
+
+          <div className="about-stat-description">
+
+            <p>
+              I care about the details that make digital
+              products feel simple, intentional, and
+              enjoyable to use.
+            </p>
 
           </div>
 
@@ -69,8 +130,9 @@ function About() {
         <div className="about-philosophy">
 
           <div className="philosophy-number">
-            01
+            04
           </div>
+
 
           <div className="philosophy-content">
 
@@ -84,6 +146,7 @@ function About() {
 
           </div>
 
+
           <p>
             I believe good digital products should not
             only look good. They should be intuitive,
@@ -94,6 +157,7 @@ function About() {
         </div>
 
       </div>
+
     </section>
   );
 }
