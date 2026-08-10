@@ -10,7 +10,7 @@ const projects = [
       "A modern restaurant platform designed to improve the way customers discover meals, place orders, and interact with a restaurant.",
     tags: ["UI/UX", "React", "FastAPI", "Supabase"],
     type: "FULL-STACK",
-    slug: "urban-bite",
+    image: "/projects/urban-bite.png",
   },
 
   {
@@ -21,7 +21,7 @@ const projects = [
       "A design-focused website redesign aimed at improving visual hierarchy, usability, accessibility, and the overall digital experience.",
     tags: ["UI/UX", "Figma", "Frontend"],
     type: "REDESIGN",
-    slug: "wfwma",
+    image: "/projects/wfwma.png",
   },
 
   {
@@ -32,7 +32,7 @@ const projects = [
       "A task management application that allows users to create, update, complete, filter, and delete tasks through a responsive interface.",
     tags: ["React", "FastAPI", "Supabase"],
     type: "FULL-STACK",
-    slug: "task-management",
+    image: "/projects/task-management.png",
   },
 
   {
@@ -43,7 +43,7 @@ const projects = [
       "An interactive birthday website combining storytelling, animation, music, photography, and a playful terminal-inspired experience.",
     tags: ["HTML", "CSS", "JavaScript", "Creative"],
     type: "CREATIVE",
-    slug: "birthday-experience",
+    image: "/projects/birthday.png",
   },
 ];
 
@@ -95,7 +95,21 @@ function Projects() {
 
               {/* Project Visual */}
               <div className="project-visual">
+                <img
+                  src={project.image}
+                  alt={`${project.title} project preview`}
+                  className="project-image"
+                />
+                <div className="project-visual-overlay">
+                    <span className="project-type">
+                      {project.type}
+                    </span>
 
+                    <span className="project-number">
+                      {project.number}
+                    </span>
+                </div>
+                
                 <div className="project-visual-content">
 
                   <span className="project-type">
