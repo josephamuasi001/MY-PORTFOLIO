@@ -16,7 +16,6 @@ function Contact() {
           CONTACT
         </div>
 
-
         {/* Main Contact */}
         <div className="contact-main">
 
@@ -34,7 +33,6 @@ function Contact() {
 
           </div>
 
-
           <div className="contact-description">
 
             <p>
@@ -43,22 +41,23 @@ function Contact() {
               to join your team, I'd love to hear from you.
             </p>
 
+            {/* Email Address */}
             <a
               href="mailto:jamuasi001@st.ug.edu.gh"
               className="contact-email"
             >
               <Mail size={18} />
-              joseph@example.com
+              jamuasi001@st.ug.edu.gh
             </a>
 
           </div>
 
         </div>
 
-
         {/* Contact Actions */}
         <div className="contact-actions">
 
+          {/* Email CTA */}
           <a
             href="mailto:jamuasi001@st.ug.edu.gh"
             className="contact-primary"
@@ -67,16 +66,21 @@ function Contact() {
             <ArrowUpRight size={20} />
           </a>
 
-
+          {/* Social Links */}
           <div className="contact-socials">
 
+            {/* GitHub */}
             <a
               href="https://github.com/josephamuasi001"
+              target="_blank"
+              rel="noopener noreferrer"
               aria-label="GitHub"
             >
               GitHub
+              <ArrowUpRight size={15} />
             </a>
 
+            {/* LinkedIn - coming later */}
             <a
               href="#"
               aria-label="LinkedIn"
@@ -87,7 +91,6 @@ function Contact() {
           </div>
 
         </div>
-
 
         {/* Availability */}
         <div className="contact-availability">
