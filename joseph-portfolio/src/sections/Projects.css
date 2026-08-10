@@ -709,6 +709,36 @@
   transition: color 0.3s ease;
 }
 
+.project-action {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  flex: 1;
+
+  gap: 20px;
+
+  color: inherit;
+
+  text-decoration: none;
+
+  transition: color 0.3s ease;
+}
+
+.project-action:hover {
+  color: var(--color-accent);
+}
+
+.project-action:hover .project-link-arrow {
+  background: var(--color-accent);
+
+  color: var(--color-bg);
+
+  transform: rotate(45deg);
+}
+
 
 .project-link-arrow {
   width: 30px;

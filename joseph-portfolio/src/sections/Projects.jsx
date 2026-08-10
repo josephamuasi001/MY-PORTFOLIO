@@ -203,41 +203,44 @@ function Projects() {
 
 
                 {/* Case Study Link */}
+                {/* Project Links */}
                 <div className="project-link-wrapper">
 
-  {project.liveUrl && (
-    <a
-      href={project.liveUrl}
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <span>
-        LIVE PROJECT
-      </span>
+                {project.liveUrl && (
+                  <a
+                    href={project.liveUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="project-action"
+                  >
+                    <span>
+                      LIVE PROJECT
+                    </span>
 
-      <span className="project-link-arrow">
-        <ArrowUpRight size={15} />
-      </span>
-    </a>
-  )}
+                    <span className="project-link-arrow">
+                      <ArrowUpRight size={15} />
+                    </span>
+                  </a>
+                )}
 
-  {project.githubUrl && (
-    <a
-      href={project.githubUrl}
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <span>
-        GITHUB
-      </span>
+                  {project.githubUrl && (
+                    <a
+                      href={project.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="project-action"
+                    >
+                      <span>
+                        GITHUB
+                      </span>
 
-      <span className="project-link-arrow">
-        <ArrowUpRight size={15} />
-      </span>
-    </a>
-  )}
+                      <span className="project-link-arrow">
+                        <ArrowUpRight size={15} />
+                      </span>
+                    </a>
+                  )}
 
-</div>
+                </div>
               </div>
 
             </article>
