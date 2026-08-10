@@ -98,6 +98,7 @@ button {
 img {
   max-width: 100%;
   display: block;
+  border-radius: 50%;
 }
 
 
