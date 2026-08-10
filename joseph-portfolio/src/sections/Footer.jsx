@@ -54,7 +54,7 @@ function Footer() {
               CONNECT
             </p>
 
-            <a href="#">
+            <a href="https://github.com/josephamuasi001">
                 <FaGithub size={16} />
                 GitHub
                 <ArrowUpRight size={14} />
@@ -68,7 +68,7 @@ function Footer() {
 
 
 
-            <a href="mailto:joseph@example.com">
+            <a href="mailto:jamuasi001@st.ug.edu.gh">
                 <FaEnvelope size={16} />
                 Email
                 <ArrowUpRight size={14} />

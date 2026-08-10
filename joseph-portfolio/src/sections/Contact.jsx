@@ -44,7 +44,7 @@ function Contact() {
             </p>
 
             <a
-              href="mailto:joseph@example.com"
+              href="mailto:jamuasi001@st.ug.edu.gh"
               className="contact-email"
             >
               <Mail size={18} />
@@ -60,7 +60,7 @@ function Contact() {
         <div className="contact-actions">
 
           <a
-            href="mailto:joseph@example.com"
+            href="mailto:jamuasi001@st.ug.edu.gh"
             className="contact-primary"
           >
             Start a conversation
@@ -71,7 +71,7 @@ function Contact() {
           <div className="contact-socials">
 
             <a
-              href="#"
+              href="https://github.com/josephamuasi001"
               aria-label="GitHub"
             >
               GitHub
