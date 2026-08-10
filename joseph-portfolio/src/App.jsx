@@ -5,6 +5,9 @@ import About from "./sections/About";
 import Services from "./sections/Services";
 import Skills from "./sections/Skills";
 import Contact from "./sections/Contact";
+import Footer from "./sections/Footer";
+
+
 
 function App() {
   return (
@@ -20,7 +23,7 @@ function App() {
         <Skills />
         <Contact />
       </main>
-
+      <Footer />
     </div>
   );
 }
