@@ -11,6 +11,8 @@ const projects = [
     tags: ["UI/UX", "React", "FastAPI", "Supabase"],
     type: "FULL-STACK",
     image: "/projects/urban-bite.png",
+    liveUrl: null,
+    githubUrl: "https://github.com/josephamuasi001/urban-bites",
   },
 
   {
@@ -22,6 +24,9 @@ const projects = [
     tags: ["UI/UX", "Figma", "Frontend"],
     type: "REDESIGN",
     image: "/projects/wfwma.png",
+    liveUrl: "https://wfwma-frontend.onrender.com/",
+    githubUrl:
+      "https://github.com/josephamuasi001/WOMEN-FOR-WOMEN-MEDICAL-ASSOCIATE-WEBSITE-REPO.git",
   },
 
   {
@@ -33,6 +38,9 @@ const projects = [
     tags: ["React", "FastAPI", "Supabase"],
     type: "FULL-STACK",
     image: "/projects/task-management.png",
+    liveUrl: "https://task-management-app-ydlf.onrender.com/",
+    githubUrl:
+      "https://github.com/josephamuasi001/FullStackProject---REACT-FASTAPI-SUPABASE",
   },
 
   {
@@ -44,6 +52,8 @@ const projects = [
     tags: ["HTML", "CSS", "JavaScript", "Creative"],
     type: "CREATIVE",
     image: "/projects/birthday.png",
+    liveUrl: "https://item-clay-75244791.figma.site/",
+    githubUrl: null,
   },
 ];
 
@@ -195,16 +205,39 @@ function Projects() {
                 {/* Case Study Link */}
                 <div className="project-link-wrapper">
 
-                  <span>
-                    CASE STUDY
-                  </span>
+  {project.liveUrl && (
+    <a
+      href={project.liveUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <span>
+        LIVE PROJECT
+      </span>
 
-                  <span className="project-link-arrow">
-                    <ArrowUpRight size={15} />
-                  </span>
+      <span className="project-link-arrow">
+        <ArrowUpRight size={15} />
+      </span>
+    </a>
+  )}
 
-                </div>
+  {project.githubUrl && (
+    <a
+      href={project.githubUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <span>
+        GITHUB
+      </span>
 
+      <span className="project-link-arrow">
+        <ArrowUpRight size={15} />
+      </span>
+    </a>
+  )}
+
+</div>
               </div>
 
             </article>
