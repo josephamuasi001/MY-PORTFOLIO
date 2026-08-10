@@ -45,7 +45,7 @@ const projects = [
 
 function Projects() {
   return (
-    <section className="projects" id="work">
+    <section className="projects" id="projects">
       <div className="projects-container">
 
         {/* Section Header */}
