@@ -1,4 +1,20 @@
-import { ArrowUpRight } from "lucide-react";
+import {
+  siFigma,
+  siCanva,
+  siReact,
+  siJavascript,
+  siHtml5,
+  siCss3,
+  siVite,
+  siPython,
+  siFastapi,
+  siSupabase,
+  siGit,
+  siGithub,
+  siVercel,
+  siRender,
+} from "simple-icons";
+
 import "./Skills.css";
 
 const skillGroups = [
@@ -6,56 +22,49 @@ const skillGroups = [
     number: "01",
     title: "DESIGN",
     description:
-      "I use design to understand problems, explore ideas, and create interfaces that are clear and purposeful.",
+      "Designing interfaces and digital experiences with a focus on clarity, usability, and visual consistency.",
     skills: [
-      "Figma",
-      "Wireframing",
-      "Prototyping",
-      "UI Design",
-      "UX Design",
-      "Design Systems",
+      { name: "Figma", icon: siFigma },
+      { name: "Canva", icon: siCanva },
     ],
   },
+
   {
     number: "02",
     title: "FRONTEND",
     description:
-      "I build responsive and interactive interfaces with a strong focus on usability, structure, and visual quality.",
+      "Building responsive and interactive interfaces that turn ideas and designs into functional web experiences.",
     skills: [
-      "React",
-      "JavaScript",
-      "HTML",
-      "CSS",
-      "Responsive Design",
-      "REST APIs",
+      { name: "React", icon: siReact },
+      { name: "JavaScript", icon: siJavascript },
+      { name: "HTML5", icon: siHtml5 },
+      { name: "CSS3", icon: siCss3 },
+      { name: "Vite", icon: siVite },
     ],
   },
+
   {
     number: "03",
     title: "BACKEND",
     description:
-      "I build the server-side logic and APIs needed to connect frontend experiences with real application data.",
+      "Developing APIs, server-side logic, and application infrastructure that power real-world web applications.",
     skills: [
-      "Python",
-      "FastAPI",
-      "REST APIs",
-      "Supabase",
-      "Database Design",
-      "Authentication",
+      { name: "Python", icon: siPython },
+      { name: "FastAPI", icon: siFastapi },
+      { name: "Supabase", icon: siSupabase },
     ],
   },
+
   {
     number: "04",
     title: "TOOLS & WORKFLOW",
     description:
-      "I use modern development tools and workflows to manage, test, deploy, and maintain projects.",
+      "Using modern development tools to collaborate, manage code, deploy applications, and maintain projects.",
     skills: [
-      "Git",
-      "GitHub",
-      "VS Code",
-      "Render",
-      "Vite",
-      "Agile / Scrum",
+      { name: "Git", icon: siGit },
+      { name: "GitHub", icon: siGithub },
+      { name: "Render", icon: siRender },
+      { name: "Vercel", icon: siVercel },
     ],
   },
 ];
@@ -75,23 +84,29 @@ function Skills() {
         {/* Header */}
         <div className="skills-header">
 
-          <h2>
-            Tools I use
-            <br />
-            <span>to bring ideas to life.</span>
-          </h2>
+          <div>
+            <p className="skills-eyebrow">
+              TECHNOLOGIES & TOOLS
+            </p>
 
-          <p>
-            My workflow sits between design and development.
-            I like understanding the experience first, then
-            building the technology behind it.
+            <h2>
+              The tools
+              <br />
+              <span>behind the work.</span>
+            </h2>
+          </div>
+
+          <p className="skills-intro">
+            A combination of design thinking, frontend
+            development, backend engineering, and modern
+            development workflows.
           </p>
 
         </div>
 
 
         {/* Skill Groups */}
-        <div className="skills-list">
+        <div className="skills-groups">
 
           {skillGroups.map((group) => (
             <article
@@ -99,29 +114,54 @@ function Skills() {
               key={group.number}
             >
 
-              <div className="skill-group-number">
-                {group.number}
+              {/* Group Header */}
+              <div className="skill-group-header">
+
+                <span className="skill-group-number">
+                  {group.number}
+                </span>
+
+                <h3>
+                  {group.title}
+                </h3>
+
               </div>
 
 
-              <div className="skill-group-title">
-                <h3>{group.title}</h3>
-              </div>
-
-
+              {/* Group Content */}
               <div className="skill-group-content">
 
                 <p>
                   {group.description}
                 </p>
 
-                <div className="skill-tags">
 
-                  {group.skills.map((skill) => (
-                    <span key={skill}>
-                      {skill}
-                    </span>
-                  ))}
+                {/* Technology Cards */}
+                <div className="technology-grid">
+
+                  {group.skills.map((skill) => {
+                    const icon = skill.icon;
+
+                    return (
+                      <div
+                        className="technology-card"
+                        key={skill.name}
+                      >
+
+                        <div
+                          className="technology-icon"
+                          dangerouslySetInnerHTML={{
+                            __html: icon.svg,
+                          }}
+                        />
+
+                        <span>
+                          {skill.name}
+                        </span>
+
+                      </div>
+                    );
+                  })}
 
                 </div>
 
@@ -133,15 +173,16 @@ function Skills() {
         </div>
 
 
-        {/* Learning */}
-        <div className="learning">
+        {/* Currently Exploring */}
+        <div className="exploring">
 
-          <div className="learning-label">
-            <span className="learning-dot"></span>
-            CURRENTLY LEARNING
+          <div className="exploring-label">
+            <span className="exploring-dot"></span>
+            CURRENTLY EXPLORING
           </div>
 
-          <div className="learning-content">
+          <div className="exploring-content">
+
             <h3>
               Always building.
               <br />
@@ -150,25 +191,11 @@ function Skills() {
 
             <p>
               I'm continuously expanding my knowledge across
-              software engineering, product development,
-              system design, and modern web technologies.
+              software engineering, system design, modern
+              web technologies, and product development.
             </p>
+
           </div>
-
-        </div>
-
-
-        {/* CTA */}
-        <div className="skills-footer">
-
-          <span>
-            HAVE A TECHNICAL CHALLENGE?
-          </span>
-
-          <a href="#contact">
-            Let's talk
-            <ArrowUpRight size={17} />
-          </a>
 
         </div>
 
@@ -177,4 +204,4 @@ function Skills() {
   );
 }
 
-export default Skills;  
+export default Skills;

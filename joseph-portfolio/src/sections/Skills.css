@@ -1,3 +1,7 @@
+/* =================================
+   SKILLS SECTION
+================================= */
+
 .skills {
   padding: 160px 0;
 
@@ -17,12 +21,17 @@
 
 
 /* =================================
-   HEADER
+   SECTION LABEL
 ================================= */
 
 .skills-label {
-  margin-bottom: 80px;
+  margin-bottom: 90px;
 }
+
+
+/* =================================
+   HEADER
+================================= */
 
 .skills-header {
   display: grid;
@@ -35,7 +44,19 @@
 
   align-items: end;
 
-  margin-bottom: 100px;
+  margin-bottom: 110px;
+}
+
+.skills-eyebrow {
+  margin-bottom: 25px;
+
+  color: var(--color-accent);
+
+  font-family: var(--font-mono);
+
+  font-size: 10px;
+
+  letter-spacing: 0.08em;
 }
 
 .skills-header h2 {
@@ -58,7 +79,7 @@
   color: var(--color-text-muted);
 }
 
-.skills-header p {
+.skills-intro {
   max-width: 430px;
 
   color: var(--color-text-muted);
@@ -70,10 +91,10 @@
 
 
 /* =================================
-   SKILL LIST
+   SKILL GROUPS
 ================================= */
 
-.skills-list {
+.skills-groups {
   border-top: 1px solid var(--color-border);
 }
 
@@ -86,51 +107,44 @@
   display: grid;
 
   grid-template-columns:
-    70px
-    0.7fr
+    280px
     1fr;
 
-  gap: 50px;
+  gap: 80px;
 
-  padding: 50px 0;
+  padding: 70px 0;
 
   border-bottom: 1px solid var(--color-border);
-
-  transition:
-    padding 0.3s ease,
-    background 0.3s ease;
-}
-
-.skill-group:hover {
-  padding-left: 20px;
-  padding-right: 20px;
-
-  background: var(--color-bg);
 }
 
 
 /* =================================
-   NUMBER
+   GROUP HEADER
 ================================= */
 
+.skill-group-header {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 25px;
+}
+
 .skill-group-number {
+  padding-top: 8px;
+
   color: var(--color-accent);
 
   font-family: var(--font-mono);
 
-  font-size: 11px;
+  font-size: 10px;
 }
 
-
-/* =================================
-   TITLE
-================================= */
-
-.skill-group-title h3 {
+.skill-group-header h3 {
   font-family: var(--font-display);
 
   font-size: clamp(
-    28px,
+    30px,
     3vw,
     44px
   );
@@ -144,69 +158,132 @@
 
 
 /* =================================
-   CONTENT
+   GROUP CONTENT
 ================================= */
 
 .skill-group-content {
-  max-width: 520px;
+  max-width: 650px;
 }
 
-.skill-group-content p {
-  margin-bottom: 25px;
+.skill-group-content > p {
+  max-width: 500px;
+
+  margin-bottom: 35px;
 
   color: var(--color-text-muted);
 
   font-size: 13px;
 
-  line-height: 1.75;
+  line-height: 1.8;
 }
 
 
 /* =================================
-   SKILL TAGS
+   TECHNOLOGY GRID
 ================================= */
 
-.skill-tags {
-  display: flex;
+.technology-grid {
+  display: grid;
 
-  flex-wrap: wrap;
+  grid-template-columns:
+    repeat(4, 1fr);
 
-  gap: 8px;
+  gap: 10px;
 }
 
-.skill-tags span {
-  padding: 8px 12px;
+
+/* =================================
+   TECHNOLOGY CARD
+================================= */
+
+.technology-card {
+  min-height: 130px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  justify-content: space-between;
+
+  padding: 18px;
 
   border: 1px solid var(--color-border);
 
-  border-radius: var(--radius-pill);
+  border-radius: var(--radius-md);
 
+  background: var(--color-bg);
+
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease,
+    background 0.35s ease;
+}
+
+.technology-card:hover {
+  transform: translateY(-5px);
+
+  border-color: var(--color-accent);
+
+  background: var(--color-surface);
+}
+
+
+/* =================================
+   TECHNOLOGY ICON
+================================= */
+
+.technology-icon {
+  width: 32px;
+
+  height: 32px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  color: var(--color-text);
+}
+
+.technology-icon svg {
+  width: 100%;
+  height: 100%;
+
+  fill: currentColor;
+}
+
+.technology-card:hover .technology-icon {
+  color: var(--color-accent);
+}
+
+
+/* =================================
+   TECHNOLOGY NAME
+================================= */
+
+.technology-card span {
   color: var(--color-text-muted);
 
   font-family: var(--font-mono);
 
-  font-size: 9px;
+  font-size: 10px;
 
-  transition:
-    color 0.3s ease,
-    border-color 0.3s ease,
-    background 0.3s ease;
+  transition: color 0.3s ease;
 }
 
-.skill-tags span:hover {
-  color: var(--color-bg);
-
-  background: var(--color-accent);
-
-  border-color: var(--color-accent);
+.technology-card:hover span {
+  color: var(--color-text);
 }
 
 
 /* =================================
-   CURRENTLY LEARNING
+   CURRENTLY EXPLORING
 ================================= */
 
-.learning {
+.exploring {
   display: grid;
 
   grid-template-columns:
@@ -226,14 +303,12 @@
   background: var(--color-bg);
 }
 
-.learning-label {
+.exploring-label {
   display: flex;
 
   align-items: center;
 
   gap: 10px;
-
-  align-self: start;
 
   color: var(--color-text-muted);
 
@@ -244,7 +319,7 @@
   letter-spacing: 0.08em;
 }
 
-.learning-dot {
+.exploring-dot {
   width: 7px;
   height: 7px;
 
@@ -256,7 +331,7 @@
     0 0 12px rgba(184, 255, 61, 0.6);
 }
 
-.learning-content h3 {
+.exploring-content h3 {
   margin-bottom: 25px;
 
   font-family: var(--font-display);
@@ -274,7 +349,7 @@
   letter-spacing: -0.05em;
 }
 
-.learning-content p {
+.exploring-content p {
   max-width: 440px;
 
   color: var(--color-text-muted);
@@ -286,59 +361,10 @@
 
 
 /* =================================
-   FOOTER
-================================= */
-
-.skills-footer {
-  display: flex;
-
-  align-items: center;
-
-  justify-content: space-between;
-
-  gap: 30px;
-
-  padding-top: 60px;
-}
-
-.skills-footer span {
-  color: var(--color-text-muted);
-
-  font-family: var(--font-mono);
-
-  font-size: 10px;
-
-  letter-spacing: 0.08em;
-}
-
-.skills-footer a {
-  display: flex;
-
-  align-items: center;
-
-  gap: 8px;
-
-  color: var(--color-text);
-
-  font-size: 14px;
-
-  transition:
-    color 0.3s ease,
-    gap 0.3s ease;
-}
-
-.skills-footer a:hover {
-  color: var(--color-accent);
-
-  gap: 13px;
-}
-
-
-/* =================================
    TABLET
 ================================= */
 
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
 
   .skills {
     padding: 120px 0;
@@ -349,24 +375,20 @@
 
     gap: 35px;
 
-    margin-bottom: 70px;
+    margin-bottom: 80px;
   }
 
   .skill-group {
     grid-template-columns:
-      50px
-      0.7fr
+      200px
       1fr;
 
-    gap: 30px;
+    gap: 40px;
   }
 
-  .learning {
-    grid-template-columns: 1fr;
-
-    gap: 40px;
-
-    margin-top: 90px;
+  .technology-grid {
+    grid-template-columns:
+      repeat(3, 1fr);
   }
 
 }
@@ -376,7 +398,7 @@
    MOBILE
 ================================= */
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
 
   .skills {
     padding: 100px 0;
@@ -390,11 +412,11 @@
   }
 
   .skills-label {
-    margin-bottom: 55px;
+    margin-bottom: 60px;
   }
 
   .skills-header {
-    margin-bottom: 55px;
+    margin-bottom: 65px;
   }
 
   .skills-header h2 {
@@ -405,66 +427,52 @@
     );
   }
 
-  .skills-header p {
+  .skills-intro {
     font-size: 14px;
   }
 
   .skill-group {
-    display: grid;
+    display: block;
 
+    padding: 45px 0;
+  }
+
+  .skill-group-header {
+    margin-bottom: 30px;
+  }
+
+  .skill-group-header h3 {
+    font-size: 32px;
+  }
+
+  .technology-grid {
     grid-template-columns:
-      35px
-      1fr;
-
-    gap: 15px;
-
-    padding: 35px 0;
+      repeat(2, 1fr);
   }
 
-  .skill-group-title {
-    grid-column: 2;
+  .technology-card {
+    min-height: 110px;
+
+    padding: 15px;
   }
 
-  .skill-group-content {
-    grid-column: 2;
+  .technology-icon {
+    width: 28px;
+    height: 28px;
   }
 
-  .skill-group-number {
-    grid-column: 1;
-    grid-row: 1 / span 2;
-  }
-
-  .skill-group:hover {
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-
-  .skill-group-title h3 {
-    font-size: 30px;
-  }
-
-  .learning {
-    margin-top: 70px;
-
-    padding: 30px;
+  .exploring {
+    grid-template-columns: 1fr;
 
     gap: 35px;
+
+    margin-top: 80px;
+
+    padding: 30px;
   }
 
-  .learning-content h3 {
+  .exploring-content h3 {
     font-size: 40px;
-  }
-
-  .learning-content p {
-    font-size: 13px;
-  }
-
-  .skills-footer {
-    flex-direction: column;
-
-    align-items: flex-start;
-
-    padding-top: 45px;
   }
 
 }
