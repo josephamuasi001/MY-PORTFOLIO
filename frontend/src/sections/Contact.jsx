@@ -8,7 +8,7 @@ import {
 import "./Contact.css";
 
 
-const API_URL = "https://joseph-portfolio-api-55hi.onrender.com";
+const API_URL = import.meta.env.VITE_API_URL;
 
 
 
