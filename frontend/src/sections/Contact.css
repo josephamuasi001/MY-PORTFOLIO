@@ -291,6 +291,246 @@
 }
 
 
+
+/* =================================
+ENQUIRY FORM
+================================= */
+
+.contact-form {
+  margin-top: 100px;
+
+  padding-top: 35px;
+
+  border-top: 1px solid var(--color-border);
+}
+
+.contact-form-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, 1fr);
+
+  gap: 30px;
+}
+
+.form-group {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 10px;
+
+  margin-bottom: 30px;
+}
+
+.form-group label {
+  color: var(--color-text-muted);
+
+  font-family: var(--font-mono);
+
+  font-size: 9px;
+
+  letter-spacing: 0.08em;
+}
+
+.form-group label span {
+  color: var(--color-text-muted);
+
+  opacity: 0.6;
+}
+
+/* =================================
+INPUTS
+================================= */
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+
+  padding: 16px 18px;
+
+  background: transparent;
+
+  border: 1px solid var(--color-border);
+
+  border-radius: 8px;
+
+  color: var(--color-text);
+
+  font-family: var(--font-body);
+
+  font-size: 14px;
+
+  outline: none;
+
+  transition:
+    border-color 0.3s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: var(--color-text-muted);
+
+  opacity: 0.5;
+}
+
+/* =================================
+FOCUS
+================================= */
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--color-accent);
+
+  background: rgba(184, 255, 61, 0.02);
+
+  box-shadow:
+    0 0 0 1px var(--color-accent);
+}
+
+/* =================================
+SELECT
+================================= */
+
+.form-group select {
+  cursor: pointer;
+
+  appearance: none;
+
+  background-image:
+    linear-gradient(45deg, transparent 50%, var(--color-text-muted) 50%),
+    linear-gradient(135deg, var(--color-text-muted) 50%, transparent 50%);
+
+  background-position:
+    calc(100% - 18px) 50%,
+    calc(100% - 13px) 50%;
+
+  background-size:
+    5px 5px,
+    5px 5px;
+
+  background-repeat: no-repeat;
+}
+
+/* =================================
+TEXTAREA
+================================= */
+
+.form-group textarea {
+  min-height: 180px;
+
+  resize: vertical;
+
+  line-height: 1.7;
+}
+
+/* =================================
+FORM STATUS
+================================= */
+
+.form-status {
+  margin-bottom: 25px;
+
+  padding: 14px 16px;
+
+  border: 1px solid var(--color-border);
+
+  border-radius: 8px;
+
+  font-family: var(--font-mono);
+
+  font-size: 11px;
+
+  line-height: 1.6;
+}
+
+.form-status.success {
+  color: var(--color-accent);
+
+  border-color: var(--color-accent);
+
+  background: rgba(184, 255, 61, 0.04);
+}
+
+.form-status.error {
+  color: #ff6b6b;
+
+  border-color: rgba(255, 107, 107, 0.5);
+
+  background: rgba(255, 107, 107, 0.04);
+}
+
+/* =================================
+FORM SUBMIT
+================================= */
+
+.contact-form-submit {
+  display: flex;
+
+  justify-content: flex-start;
+
+  margin-top: 10px;
+}
+
+.contact-form-submit .contact-primary {
+  border: none;
+
+  cursor: pointer;
+
+  font-family: inherit;
+}
+
+.contact-form-submit .contact-primary:disabled {
+  cursor: not-allowed;
+
+  opacity: 0.6;
+
+  transform: none;
+
+  box-shadow: none;
+}
+
+/* =================================
+DIRECT EMAIL
+================================= */
+
+.contact-secondary {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 14px 18px;
+
+  border: 1px solid var(--color-border);
+
+  border-radius: var(--radius-pill);
+
+  color: var(--color-text-muted);
+
+  font-size: 12px;
+
+  transition:
+    color 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.contact-secondary:hover {
+  color: var(--color-text);
+
+  border-color: var(--color-text-muted);
+
+  transform: translateY(-2px);
+}
+
+
+
 /* =================================
    TABLET
 ================================= */
@@ -347,6 +587,26 @@
     );
   }
 
+
+    .contact-form {
+    margin-top: 70px;
+  }
+
+  .contact-form-grid {
+    grid-template-columns: 1fr;
+
+    gap: 0;
+  }
+
+  .contact-form-submit {
+    width: 100%;
+  }
+
+  .contact-form-submit .contact-primary {
+    width: 100%;
+
+    justify-content: center;
+  }
   .contact-description > p {
     font-size: 14px;
   }
