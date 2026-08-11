@@ -291,7 +291,6 @@
 }
 
 
-
 /* =================================
 ENQUIRY FORM
 ================================= */
@@ -307,8 +306,7 @@ ENQUIRY FORM
 .contact-form-grid {
   display: grid;
 
-  grid-template-columns:
-    repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
 
   gap: 30px;
 }
@@ -358,7 +356,7 @@ INPUTS
 
   color: var(--color-text);
 
-  font-family: var(--font-body);
+  font-family: inherit;
 
   font-size: 14px;
 
@@ -378,7 +376,7 @@ INPUTS
 }
 
 /* =================================
-FOCUS
+INPUT FOCUS
 ================================= */
 
 .form-group input:focus,
@@ -402,8 +400,16 @@ SELECT
   appearance: none;
 
   background-image:
-    linear-gradient(45deg, transparent 50%, var(--color-text-muted) 50%),
-    linear-gradient(135deg, var(--color-text-muted) 50%, transparent 50%);
+    linear-gradient(
+      45deg,
+      transparent 50%,
+      var(--color-text-muted) 50%
+    ),
+    linear-gradient(
+      135deg,
+      var(--color-text-muted) 50%,
+      transparent 50%
+    );
 
   background-position:
     calc(100% - 18px) 50%,
@@ -558,11 +564,33 @@ DIRECT EMAIL
 }
 
 
+
+
 /* =================================
    MOBILE
 ================================= */
 
 @media (max-width: 600px) {
+
+  .contact-form {
+    margin-top: 70px;
+  }
+
+  .contact-form-grid {
+    grid-template-columns: 1fr;
+
+    gap: 0;
+  }
+
+  .contact-form-submit {
+    width: 100%;
+  }
+
+  .contact-form-submit .contact-primary {
+    width: 100%;
+
+    justify-content: center;
+  }
 
   .contact {
     padding: 100px 0 60px;
@@ -587,26 +615,6 @@ DIRECT EMAIL
     );
   }
 
-
-    .contact-form {
-    margin-top: 70px;
-  }
-
-  .contact-form-grid {
-    grid-template-columns: 1fr;
-
-    gap: 0;
-  }
-
-  .contact-form-submit {
-    width: 100%;
-  }
-
-  .contact-form-submit .contact-primary {
-    width: 100%;
-
-    justify-content: center;
-  }
   .contact-description > p {
     font-size: 14px;
   }
