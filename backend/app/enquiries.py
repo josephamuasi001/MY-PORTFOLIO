@@ -10,10 +10,11 @@ router = APIRouter(
 )
 
 
-@router.post("/")
+@router.post("")
 def create_enquiry(enquiry: EnquiryCreate):
 
     try:
+
         response = (
             supabase
             .table("enquiries")
