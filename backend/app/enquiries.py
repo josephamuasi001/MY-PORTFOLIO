@@ -58,3 +58,39 @@ def get_enquiries():
             status_code=500,
             detail=f"Failed to retrieve enquiries: {str(error)}"
         )
+        
+
+
+@router.get("/{enquiry_id}")
+def get_enquiry(enquiry_id: int):
+
+    try:
+        response = (
+            supabase
+            .table("enquiries")
+            .select("*")
+            .eq("id", enquiry_id)
+            .single()
+            .execute()
+        )
+
+        if not response.data:
+            raise HTTPException(
+                status_code=404,
+                detail="Enquiry not found"
+            )
+
+        return {
+            "message": "Enquiry retrieved successfully",
+            "data": response.data
+        }
+
+    except HTTPException:
+        raise
+
+    except Exception as error:
+
+        raise HTTPException(
+            status_code=500,
+            detail=f"Failed to retrieve enquiry: {str(error)}"
+        )
