@@ -33,3 +33,28 @@ def create_enquiry(enquiry: EnquiryCreate):
             status_code=500,
             detail=f"Failed to submit enquiry: {str(error)}"
         )
+        
+        
+@router.get("/")
+def get_enquiries():
+
+    try:
+        response = (
+            supabase
+            .table("enquiries")
+            .select("*")
+            .order("created_at", desc=True)
+            .execute()
+        )
+
+        return {
+            "message": "Enquiries retrieved successfully",
+            "data": response.data
+        }
+
+    except Exception as error:
+
+        raise HTTPException(
+            status_code=500,
+            detail=f"Failed to retrieve enquiries: {str(error)}"
+        )
