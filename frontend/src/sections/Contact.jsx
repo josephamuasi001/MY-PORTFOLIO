@@ -8,7 +8,7 @@ import {
 import "./Contact.css";
 
 
-const API_URL = "http://127.0.0.1:8000";
+const API_URL = "https://joseph-portfolio-api-55hi.onrender.com";
 
 
 function Contact() {
