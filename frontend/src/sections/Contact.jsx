@@ -154,27 +154,7 @@ function Contact() {
         <div className="contact-main">
 
 
-          <div className="contact-heading">
-
-            <p className="contact-eyebrow">
-
-              HAVE A PROJECT OR OPPORTUNITY?
-
-            </p>
-
-
-            <h2>
-
-              Let's build
-
-              <br />
-
-              <span>something great.</span>
-
-            </h2>
-
-          </div>
-
+          
 
           <div className="contact-description">
 

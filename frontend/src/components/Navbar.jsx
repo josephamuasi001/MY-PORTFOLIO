@@ -20,7 +20,7 @@ function Navbar() {
           className="navbar-logo"
           onClick={closeMenu}
         >
-          JOSEPH<span>.</span>
+          JOSEPH<span className="navbar-name"> AMUASI </span>
         </a>
 
 
