@@ -25,7 +25,11 @@ function Hero() {
 
           <span>I CREATE.</span>
         </h1>
+        <div>
+          <img src="favicon.png" alt="" />
 
+
+        </div>
 
         {/* Bottom Content */}
         <div className="hero-bottom">
