@@ -93,7 +93,7 @@ function Hero() {
               <div className="hero-image-overlay"></div>
 
               <img
-                src="/images/joseph-hero.png"
+                src="/images/joseph.png"
                 alt="Joseph AMUASI"
                 className="hero-image"
               />
