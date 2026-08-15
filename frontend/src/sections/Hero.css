@@ -34,7 +34,30 @@
 }
 
 
+/* =================================
+   HERO MAIN LAYOUT
+================================= */
 
+.hero-main {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.35fr)
+    minmax(300px, 0.65fr);
+
+  align-items: center;
+
+  gap: 70px;
+}
+
+
+/* =================================
+   HERO CONTENT
+================================= */
+
+.hero-content {
+  min-width: 0;
+}
 
 
 
@@ -173,6 +196,9 @@
 .hero-title span {
   color: var(--color-accent);
 }
+
+
+
 
 
 /* =================================
