@@ -628,10 +628,34 @@
 /* =================================
    TABLET
 ================================= */
-
 @media (max-width: 900px) {
 
+  .hero-main {
+
+    grid-template-columns: 1fr;
+
+    gap: 50px;
+  }
+
+
+  .hero-image-wrapper {
+
+    justify-content: flex-start;
+
+    order: 2;
+  }
+
+
+  .hero-image-frame {
+
+    width: min(100%, 420px);
+
+    aspect-ratio: 4 / 5;
+  }
+
+
   .hero-bottom {
+
     align-items: flex-start;
 
     flex-direction: column;
@@ -641,11 +665,13 @@
 
 
   .hero-actions {
+
     width: 100%;
   }
 
 
   .hero-scroll {
+
     display: none;
   }
 
