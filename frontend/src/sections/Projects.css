@@ -134,9 +134,13 @@
 }
 
 .project-card:hover {
-  border-color: #3a3a3a;
+  transform: translateY(-6px);
 
-  transform: translateY(-4px);
+  border-color: rgba(184, 255, 61, 0.22);
+
+  box-shadow:
+    0 25px 60px rgba(0, 0, 0, 0.45),
+    0 0 45px rgba(184, 255, 61, 0.12);
 }
 
 
