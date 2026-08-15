@@ -7,72 +7,103 @@ function Hero() {
 
       <div className="hero-container">
 
-        {/* Availability */}
-        <div className="hero-eyebrow">
-          <span className="status-dot"></span>
+        <div className="hero-main">
 
-          AVAILABLE FOR FREELANCE • 2026
-        </div>
+          {/* LEFT SIDE */}
+          <div className="hero-content">
 
+            {/* Availability */}
+            <div className="hero-eyebrow">
+              <span className="status-dot"></span>
 
-        {/* Main Heading */}
-        <h1 className="hero-title">
-          I DESIGN.
-          <br />
-
-          I BUILD.
-          <br />
-
-          <span>I CREATE.</span>
-        </h1>
-      
-
-        {/* Bottom Content */}
-        <div className="hero-bottom">
-
-          {/* Introduction */}
-          <div className="hero-intro">
-
-            <p className="hero-description">
-              I'm Joseph AMUASI — a creative developer and
-              UI/UX designer focused on turning ideas into
-              thoughtful digital experiences and functional
-              products.
-            </p>
+              AVAILABLE FOR FREELANCE • 2026
+            </div>
 
 
-            <div className="hero-role">
-              UI/UX DESIGN
-              <span>•</span>
-              FRONTEND DEVELOPMENT
-              <span>•</span>
-              FULL-STACK
+            {/* Main Heading */}
+            <h1 className="hero-title">
+              I DESIGN.
+              <br />
+
+              I BUILD.
+              <br />
+
+              <span>I CREATE.</span>
+            </h1>
+
+
+            {/* Bottom Content */}
+            <div className="hero-bottom">
+
+              <div className="hero-intro">
+
+                <p className="hero-description">
+                  I'm Joseph AMUASI — a creative developer and
+                  UI/UX designer focused on turning ideas into
+                  thoughtful digital experiences and functional
+                  products.
+                </p>
+
+
+                <div className="hero-role">
+                  UI/UX DESIGN
+                  <span>•</span>
+                  FRONTEND DEVELOPMENT
+                  <span>•</span>
+                  FULL-STACK
+                </div>
+
+              </div>
+
+
+              {/* Actions */}
+              <div className="hero-actions">
+
+                <a
+                  href="#projects"
+                  className="hero-button primary"
+                >
+                  View My Work
+                  <ArrowDown size={17} />
+                </a>
+
+
+                <a
+                  href="#contact"
+                  className="hero-button secondary"
+                >
+                  Let's Talk
+                  <ArrowUpRight size={17} />
+                </a>
+
+              </div>
+
             </div>
 
           </div>
 
 
-          {/* Actions */}
-          <div className="hero-actions">
+          {/* RIGHT SIDE — IMAGE */}
+          <div className="hero-image-wrapper">
 
-            <a
-              href="#projects"
-              className="hero-button primary"
-            >
-              View My Work
+            <div className="hero-image-glow"></div>
 
-              <ArrowDown size={17} />
-            </a>
+            <div className="hero-image-frame">
 
+              <div className="hero-image-overlay"></div>
 
-            <a
-              href="#contact"
-              className="hero-button secondary"
-            >
-              Let's Talk
+              <img
+                src="/images/joseph-hero.png"
+                alt="Joseph AMUASI"
+                className="hero-image"
+              />
 
-              <ArrowUpRight size={17} />
-            </a>
+              <div className="hero-image-label">
+                <span className="hero-image-dot"></span>
+                JOSEPH AMUASI
+              </div>
+
+            </div>
 
           </div>
 
