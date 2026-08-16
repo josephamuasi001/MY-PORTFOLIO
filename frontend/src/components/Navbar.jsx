@@ -85,7 +85,7 @@ function Navbar({ theme, setTheme }) {
         >
           {theme === "dark" ? (
             <>
-              <Sun size={32} />
+              <Sun size={22} />
               <span className="light-text">LIGHT</span>
             </>
           ) : (
