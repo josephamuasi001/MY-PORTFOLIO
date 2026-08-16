@@ -9,40 +9,54 @@ import Footer from "./sections/Footer";
 import { useEffect, useState } from "react";
 
 
-
-
-
 function App() {
 
   const [theme, setTheme] = useState(() => {
-  return localStorage.getItem("theme") || "dark";
+    return localStorage.getItem("theme") || "dark";
   });
 
-  useEffect(() => {
-  document.documentElement.setAttribute(
-    "data-theme",
-    theme
-  );
 
-  localStorage.setItem("theme", theme);
+  useEffect(() => {
+
+    document.documentElement.setAttribute(
+      "data-theme",
+      theme
+    );
+
+    localStorage.setItem("theme", theme);
+
   }, [theme]);
+
 
   return (
     <div className="app">
 
-      <Navbar />
+      <Navbar
+        theme={theme}
+        setTheme={setTheme}
+      />
 
       <main>
+
         <Hero />
+
         <Projects />
+
         <About />
+
         <Services />
+
         <Skills />
+
         <Contact />
+
       </main>
+
       <Footer />
+
     </div>
   );
 }
+
 
 export default App;
