@@ -373,3 +373,64 @@
   }
 
 }
+
+
+/* =================================
+   THEME TOGGLE
+================================= */
+
+.theme-toggle {
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid var(--color-border);
+
+  border-radius: 50%;
+
+  background: var(--color-surface);
+
+  color: var(--color-text);
+
+  cursor: pointer;
+
+  backdrop-filter: blur(12px);
+
+  -webkit-backdrop-filter: blur(12px);
+
+  box-shadow:
+    0 8px 24px rgba(0, 0, 0, 0.18);
+
+  transition:
+    color 0.3s ease,
+    background 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease,
+    transform 0.3s ease;
+}
+
+
+/* Hover */
+
+.theme-toggle:hover {
+
+  color: var(--color-accent);
+
+  border-color: var(--color-accent);
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 0 18px rgba(184, 255, 61, 0.18),
+    0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Active click */
+
+.theme-toggle:active {
+  transform: scale(0.94);
+}
