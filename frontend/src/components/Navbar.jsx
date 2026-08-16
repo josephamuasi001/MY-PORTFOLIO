@@ -84,9 +84,15 @@ function Navbar({ theme, setTheme }) {
           }
         >
           {theme === "dark" ? (
-            <Sun size={17} />
+            <>
+              <Sun size={32} />
+              <span className="light-text">LIGHT</span>
+            </>
           ) : (
-            <Moon size={17} />
+            <>
+              <Moon size={32} />
+              <span className="dark-text">DARK</span>
+            </>
           )}
         </button>
 
