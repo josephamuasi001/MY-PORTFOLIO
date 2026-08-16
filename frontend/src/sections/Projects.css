@@ -617,6 +617,17 @@
     min-height: 450px;
   }
 
+
+  .projects-list {
+    grid-template-columns: 1fr;
+
+    gap: 24px;
+  }
+
+  .project-card {
+    border-radius: 22px;
+  }
+
 }
 
 
@@ -719,6 +730,45 @@
     align-items: flex-start;
 
     padding-top: 50px;
+  }
+
+
+  .projects-list {
+    gap: 20px;
+  }
+
+  .project-card {
+    border-radius: 20px;
+  }
+
+  .project-visual {
+    aspect-ratio: 16 / 10;
+  }
+
+  .project-tags {
+    gap: 6px;
+
+    margin-top: 22px;
+  }
+
+  .project-tags span {
+    padding: 6px 9px;
+
+    font-size: 8px;
+  }
+
+  .project-link-wrapper {
+    flex-direction: column;
+
+    align-items: stretch;
+
+    gap: 8px;
+  }
+
+  .project-action {
+    width: 100%;
+
+    min-width: 0;
   }
 }
 
