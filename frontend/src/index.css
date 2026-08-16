@@ -125,3 +125,22 @@ img {
   background: var(--color-accent);
   color: var(--color-bg);
 }
+
+
+
+/* ================================
+   LIGHT THEME
+================================= */
+
+[data-theme="light"] {
+  --color-bg: #F5F5F3;
+  --color-surface: #FFFFFF;
+  --color-card: #FFFFFF;
+
+  --color-text: #111111;
+  --color-text-muted: #666666;
+
+  --color-border: #DCDCDC;
+
+  --color-accent: #7DBA18;
+}
