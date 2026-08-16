@@ -1,9 +1,25 @@
-import { ArrowUpRight, Menu, X } from "lucide-react";
+import {
+  ArrowUpRight,
+  Menu,
+  X,
+  Sun,
+  Moon
+} from "lucide-react";
+
 import { useState } from "react";
+
 import "./Navbar.css";
 
-function Navbar() {
+function Navbar({ theme, setTheme }) {
   const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleTheme = () => {
+  setTheme(
+    theme === "dark"
+      ? "light"
+      : "dark"
+  );
+};
 
   const closeMenu = () => {
     setMenuOpen(false);
@@ -55,6 +71,24 @@ function Navbar() {
 
           <ArrowUpRight size={16} />
         </a>
+
+
+        {/* Theme Toggle */}
+        <button
+          className="theme-toggle"
+          onClick={toggleTheme}
+          aria-label={
+            theme === "dark"
+              ? "Switch to light mode"
+              : "Switch to dark mode"
+          }
+        >
+          {theme === "dark" ? (
+            <Sun size={17} />
+          ) : (
+            <Moon size={17} />
+          )}
+        </button>
 
 
         {/* Mobile Menu Button */}
