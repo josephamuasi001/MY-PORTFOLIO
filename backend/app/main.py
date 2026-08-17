@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-
+from .email_service import send_enquiry_email
 from .database import supabase
 from .enquiries import router as enquiries_router
 
