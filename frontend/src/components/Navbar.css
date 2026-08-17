@@ -496,3 +496,25 @@
 .theme-toggle:active {
   transform: translateY(-1px) scale(0.96);
 }
+
+
+@media (max-width: 600px) {
+
+  .navbar {
+    width: calc(100% - 20px);
+
+    top: 10px;
+
+    margin-top: 10px;
+
+    border-radius: 16px;
+  }
+
+
+  .navbar-container {
+    min-height: 62px;
+
+    padding: 0 16px;
+  }
+
+}
