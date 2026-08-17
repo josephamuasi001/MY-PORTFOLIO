@@ -138,9 +138,9 @@
 .navbar-links a {
   position: relative;
 
-  color: var(--color-text-muted);
+  color: white;
 
-  font-size: 12px;
+  font-size: 18px;
 
   font-weight: 500;
 
