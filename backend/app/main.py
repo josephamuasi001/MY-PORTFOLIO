@@ -46,3 +46,24 @@ def test_database():
         "message": "Supabase connection successful",
         "data": response.data
     }
+    
+    
+
+@app.get("/test-smtp")
+def test_smtp():
+
+    test_enquiry = {
+        "name": "SMTP Test",
+        "email": "test@example.com",
+        "phone": "0500000000",
+        "project_type": "Portfolio Test",
+        "budget": "Testing",
+        "timeline": "Today",
+        "message": "This is a test email from the Joseph AMUASI portfolio."
+    }
+
+    send_enquiry_email(test_enquiry)
+
+    return {
+        "message": "SMTP email sent successfully"
+    }
