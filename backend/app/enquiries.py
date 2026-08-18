@@ -18,7 +18,8 @@ def create_enquiry(enquiry: EnquiryCreate):
     try:
 
         enquiry_data = enquiry.model_dump()
-
+        
+        
         response = (
             supabase
             .table("enquiries")
