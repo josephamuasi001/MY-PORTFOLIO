@@ -1,5 +1,7 @@
 from fastapi import APIRouter, HTTPException
 
+from .email_service import send_enquiry_email
+
 from .database import supabase
 from .schemas import EnquiryCreate
 
@@ -15,12 +17,16 @@ def create_enquiry(enquiry: EnquiryCreate):
 
     try:
 
+        enquiry_data = enquiry.model_dump()
+
         response = (
             supabase
             .table("enquiries")
-            .insert(enquiry.model_dump())
+            .insert(enquiry_data)
             .execute()
         )
+
+        send_enquiry_email(enquiry_data)
 
         return {
             "message": "Enquiry submitted successfully",
