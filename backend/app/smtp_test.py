@@ -2,6 +2,7 @@ import os
 import smtplib
 
 from dotenv import load_dotenv
+from email.message import EmailMessage
 
 
 load_dotenv()
@@ -22,7 +23,21 @@ def test_smtp():
     print(f"SMTP EMAIL configured: {bool(SMTP_EMAIL)}")
     print(f"SMTP PASSWORD configured: {bool(SMTP_PASSWORD)}")
 
-    with smtplib.SMTP(SMTP_HOST, SMTP_PORT, timeout=15) as server:
+    message = EmailMessage()
+
+    message["Subject"] = "Portfolio SMTP Production Test"
+    message["From"] = SMTP_EMAIL
+    message["To"] = SMTP_EMAIL
+
+    message.set_content(
+        "This is a production SMTP test from the Joseph Portfolio API."
+    )
+
+    with smtplib.SMTP(
+        SMTP_HOST,
+        SMTP_PORT,
+        timeout=15
+    ) as server:
 
         print("SMTP TEST: connection established")
 
@@ -37,4 +52,6 @@ def test_smtp():
 
         print("SMTP TEST: login successful")
 
-    print("SMTP TEST: completed successfully")
+        server.send_message(message)
+
+        print("SMTP TEST: email sent successfully")
