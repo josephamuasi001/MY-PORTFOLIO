@@ -1,6 +1,8 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
+from .smtp_test import test_smtp
+
 from .database import supabase
 from .enquiries import router as enquiries_router
 
@@ -49,3 +51,12 @@ def test_database():
     
     
 
+
+@app.get("/test-smtp")
+def test_smtp_connection():
+
+    test_smtp()
+
+    return {
+        "message": "SMTP connection successful"
+    }
